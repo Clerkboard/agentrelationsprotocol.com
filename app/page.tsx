@@ -159,6 +159,9 @@ Signature: ed25519 ...
           <h2 className="mt-4 text-3xl md:text-5xl font-semibold tracking-tight max-w-4xl">
             Why adopt ARP.
           </h2>
+          <p className="mt-6 text-lg text-muted max-w-3xl leading-relaxed">
+            ARP sits alongside the protocols you already run — MCP, REST, GraphQL, webhooks, OAuth. It is a new surface for agent-to-agent traffic across organizations. Nothing existing has to change.
+          </p>
 
           <div className="mt-16 grid md:grid-cols-2 gap-6 max-w-6xl">
             <Benefit
@@ -184,6 +187,14 @@ Signature: ed25519 ...
             <Benefit
               title="Future-proof"
               body="ARP is the substrate, not the application. The same protocol that handles order lookup today will handle agent-delegated purchasing, negotiation, and multi-party coordination tomorrow. Build once."
+            />
+            <Benefit
+              title="Coexists with what you already have"
+              body="ARP is additive, not a replacement. MCP servers stay. REST APIs stay. Webhooks stay. OAuth stays. You add a new agent surface alongside everything you already run — nothing existing breaks, nothing needs migrating."
+            />
+            <Benefit
+              title="Zero migration cost"
+              body="Implementation is a thin protocol layer that calls the same internal services your existing APIs call. No new microservice required. No database changes. No refactor. ARP earns adoption through utility, not displacement."
             />
           </div>
         </div>
