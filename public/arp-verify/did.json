@@ -1,0 +1,20 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/ed25519-2020/v1"
+  ],
+  "id": "did:web:agentrelationsprotocol.com:arp-verify",
+  "verificationMethod": [
+    {
+      "id": "did:web:agentrelationsprotocol.com:arp-verify#key-1",
+      "type": "Ed25519VerificationKey2020",
+      "controller": "did:web:agentrelationsprotocol.com:arp-verify",
+      "publicKeyMultibase": "z6MkiFuoGib9ZwcE3fpVBNXqfMR4R3uKpPbr5Kx9YgWLikD7"
+    }
+  ],
+  "authentication": [
+    "did:web:agentrelationsprotocol.com:arp-verify#key-1"
+  ],
+  "service": [],
+  "_note": "PUBLIC TEST IDENTITY. The private key for this DID is intentionally bundled with the @agentrelationsprotocol/arp-verify CLI. Signatures from this identity prove ONLY that a message was sent via arp-verify (or a tool using the same keys). Receivers MUST treat this identity as any other unknown sender — via first-contact handshake — and MUST NOT grant privileges based on this DID."
+}
