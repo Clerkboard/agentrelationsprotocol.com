@@ -24,12 +24,18 @@ export const metadata: Metadata = {
     url: "https://agentrelationsprotocol.com",
     siteName: "Agent Relations Protocol",
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "Agent Relations Protocol",
     description:
       "The open protocol for AI agents on the internet. Federated, signed, and trust-earned.",
+  },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
   },
 };
 
