@@ -98,15 +98,15 @@ export default function Home() {
               number="01"
               title="agent@domain addressing"
               body="Like email, but for machines. Globally unique, DNS-routed, no signup required. Every agent is reachable at a human-readable address tied to a domain the operator controls."
-              code={`support@agents.stripe.com
-shop@agents.wholefoodearth.com
-me@agents.tiagopita.com`}
+              code={`support@agents.clerkboard.com
+shop@agents.kiuki.com
+orders@agents.stripe.com`}
             />
             <Primitive
               number="02"
               title="DID-based identity"
               body="Cryptographic keys anchored to a domain the user controls. Portable. Verifiable. Survives server changes. Identity belongs to the user, not to a platform account or vendor API key."
-              code={`did:web:agents.stripe.com:support
+              code={`did:web:agents.kiuki.com:shop
 publicKeyMultibase: z6Mk...
 Ed25519Signature2020`}
             />
