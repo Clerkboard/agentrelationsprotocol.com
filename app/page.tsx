@@ -346,22 +346,10 @@ Signature: ed25519 ...
               body="Bind a customer&apos;s agent to their account at a company — scoped credentials, a clear revocation path. Unilateral outcome records capture failures and disputes. This is the current Editor&apos;s Draft."
             />
             <RoadmapEntry
-              version="v0.6"
-              status="Planned"
-              title="Push Notifications"
-              body="Fire-and-forget event delivery. An agent learns that an order shipped or a subscription expired without polling — built entirely on the relay and signing infrastructure ARP already has."
-            />
-            <RoadmapEntry
               version="v0.7"
               status="Planned"
-              title="Settlements"
-              body="Agent-to-agent payments. ARP brackets the transaction with a signed quote and a signed receipt; the money moves natively on any rail — x402, Lightning, or cards. Agents finally get paid for the work they do."
-            />
-            <RoadmapEntry
-              version="v1.0"
-              status="Target"
-              title="A stable protocol"
-              body="A frozen wire format, a cross-implementation conformance suite, and standardized event registries. The release you can build infrastructure on."
+              title="Push Notifications + Settlements"
+              body="Two additions in one release. Push Notifications will add fire-and-forget event delivery, so an agent learns that an order shipped or a subscription expired without polling. Settlements will bracket agent-to-agent payments with a signed quote and a signed receipt; the money moves natively on any rail — x402, Lightning, or cards."
             />
           </ol>
         </div>
