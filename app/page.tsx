@@ -14,6 +14,7 @@ export default function Home() {
             <a href="#how" className="hover:text-foreground transition-colors">How it works</a>
             <a href="#business" className="hover:text-foreground transition-colors">For businesses</a>
             <a href="#implementations" className="hover:text-foreground transition-colors">Build</a>
+            <a href="#roadmap" className="hover:text-foreground transition-colors">Roadmap</a>
             <a
               href="https://github.com/Clerkboard/arp"
               target="_blank"
@@ -90,7 +91,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-24 md:py-32">
           <SectionLabel>How it works</SectionLabel>
           <h2 className="mt-4 text-3xl md:text-5xl font-semibold tracking-tight max-w-4xl">
-            Five primitives. Implementable in a weekend.
+            Six primitives. Implementable in a weekend.
           </h2>
 
           <div className="mt-16 grid md:grid-cols-2 gap-x-10 gap-y-14 max-w-5xl">
@@ -326,6 +327,46 @@ Signature: ed25519 ...
         </div>
       </section>
 
+      {/* Roadmap */}
+      <section id="roadmap" className="border-b border-border bg-subtle/20">
+        <div className="max-w-6xl mx-auto px-6 py-24 md:py-32">
+          <SectionLabel>Roadmap</SectionLabel>
+          <h2 className="mt-4 text-3xl md:text-5xl font-semibold tracking-tight max-w-4xl">
+            The road to 1.0.
+          </h2>
+          <p className="mt-6 text-lg text-muted max-w-2xl leading-relaxed">
+            ARP ships in small, focused versions — one coherent theme at a time. Every version is additive: nothing existing breaks, nothing needs migrating.
+          </p>
+
+          <ol className="mt-16 max-w-3xl">
+            <RoadmapEntry
+              version="v0.5"
+              status="Current"
+              title="Account Linking & Outcome Records"
+              body="Bind a customer&apos;s agent to their account at a company — scoped credentials, a clear revocation path. Unilateral outcome records capture failures and disputes. This is the current Editor&apos;s Draft."
+            />
+            <RoadmapEntry
+              version="v0.6"
+              status="Planned"
+              title="Push Notifications"
+              body="Fire-and-forget event delivery. An agent learns that an order shipped or a subscription expired without polling — built entirely on the relay and signing infrastructure ARP already has."
+            />
+            <RoadmapEntry
+              version="v0.7"
+              status="Planned"
+              title="Settlements"
+              body="Agent-to-agent payments. ARP brackets the transaction with a signed quote and a signed receipt; the money moves natively on any rail — x402, Lightning, or cards. Agents finally get paid for the work they do."
+            />
+            <RoadmapEntry
+              version="v1.0"
+              status="Target"
+              title="A stable protocol"
+              body="A frozen wire format, a cross-implementation conformance suite, and standardized event registries. The release you can build infrastructure on."
+            />
+          </ol>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="border-b border-border">
         <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 text-center">
@@ -353,9 +394,7 @@ Signature: ed25519 ...
               Read the spec
             </a>
             <a
-              href="https://github.com/Clerkboard/arp/blob/main/ROADMAP.md"
-              target="_blank"
-              rel="noreferrer"
+              href="#roadmap"
               className="inline-flex items-center gap-2 h-11 px-5 rounded-full border border-border text-sm font-medium hover:border-muted transition-colors"
             >
               Roadmap
@@ -475,6 +514,44 @@ function Principle({ n, title, body }: { n: string; title: string; body: string 
         <h3 className="text-lg font-semibold tracking-tight">{title}</h3>
         <p className="mt-1 text-muted leading-relaxed">{body}</p>
       </div>
+    </li>
+  );
+}
+
+function RoadmapEntry({
+  version,
+  status,
+  title,
+  body,
+}: {
+  version: string;
+  status: "Current" | "Planned" | "Target";
+  title: string;
+  body: string;
+}) {
+  const isCurrent = status === "Current";
+  return (
+    <li className="relative pl-10 pb-10 last:pb-0 border-l border-border last:border-transparent">
+      <span
+        aria-hidden
+        className={`absolute left-0 top-1 -translate-x-1/2 w-3 h-3 rounded-full ${
+          isCurrent ? "bg-emerald-400" : "bg-subtle ring-1 ring-border"
+        }`}
+      />
+      <div className="flex items-center gap-3">
+        <span className="text-sm font-mono text-muted">{version}</span>
+        <span
+          className={`text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-full border ${
+            isCurrent
+              ? "border-emerald-400/30 text-emerald-400"
+              : "border-border text-muted"
+          }`}
+        >
+          {status}
+        </span>
+      </div>
+      <h3 className="mt-2 text-xl font-semibold tracking-tight">{title}</h3>
+      <p className="mt-2 text-muted leading-relaxed">{body}</p>
     </li>
   );
 }
