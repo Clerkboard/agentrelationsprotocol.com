@@ -33,7 +33,7 @@ export default function Home() {
         <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-32 md:pt-32 md:pb-40">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border text-xs text-muted mb-8">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            Editor&apos;s Draft v0.5 — April 2026
+            Editor&apos;s Draft v0.7 — May 2026
           </div>
           <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.05] max-w-4xl gradient-text">
             The open protocol for AI agents on the internet.
@@ -330,26 +330,20 @@ Signature: ed25519 ...
       {/* Roadmap */}
       <section id="roadmap" className="border-b border-border bg-subtle/20">
         <div className="max-w-6xl mx-auto px-6 py-24 md:py-32">
-          <SectionLabel>Roadmap</SectionLabel>
+          <SectionLabel>Latest release</SectionLabel>
           <h2 className="mt-4 text-3xl md:text-5xl font-semibold tracking-tight max-w-4xl">
-            What ships next.
+            v0.7 — Notifications &amp; Settlements.
           </h2>
           <p className="mt-6 text-lg text-muted max-w-2xl leading-relaxed">
-            ARP ships in small, focused versions — one coherent theme at a time. Every version is additive: nothing existing breaks, nothing needs migrating.
+            ARP ships in small, focused versions. v0.7 adds two extensions — both additive, both opt-in. Nothing existing breaks, nothing needs migrating.
           </p>
 
           <ol className="mt-16 max-w-3xl">
             <RoadmapEntry
-              version="v0.5"
-              status="Current"
-              title="Account Linking & Outcome Records"
-              body="Bind a customer&apos;s agent to their account at a company — scoped credentials, a clear revocation path. Unilateral outcome records capture failures and disputes. This is the current Editor&apos;s Draft."
-            />
-            <RoadmapEntry
               version="v0.7"
-              status="Planned"
+              status="Current"
               title="Push Notifications + Settlements"
-              body="Two additions in one release. Push Notifications will add fire-and-forget event delivery, so an agent learns that an order shipped or a subscription expired without polling. Settlements will bracket agent-to-agent payments with a signed quote and a signed receipt; the money moves natively on any rail — x402, Lightning, or cards."
+              body="Two additions in one release. Push Notifications adds fire-and-forget event delivery, so an agent learns that an order shipped or a subscription expired without polling. Settlements brackets agent-to-agent payments with a signed quote and a signed receipt; money moves natively on any rail — x402, Lightning, or cards."
             />
           </ol>
         </div>
@@ -406,7 +400,7 @@ Signature: ed25519 ...
             <a href="https://clerkboard.com" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors">ClerkBoard</a>
           </div>
           <div className="text-xs text-muted">
-            Apache 2.0 · Editor&apos;s Draft v0.5
+            Apache 2.0 · Editor&apos;s Draft v0.7
           </div>
         </div>
       </footer>
