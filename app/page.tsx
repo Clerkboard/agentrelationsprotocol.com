@@ -332,7 +332,7 @@ Signature: ed25519 ...
         <div className="max-w-6xl mx-auto px-6 py-24 md:py-32">
           <SectionLabel>Roadmap</SectionLabel>
           <h2 className="mt-4 text-3xl md:text-5xl font-semibold tracking-tight max-w-4xl">
-            The road to 1.0.
+            What ships next.
           </h2>
           <p className="mt-6 text-lg text-muted max-w-2xl leading-relaxed">
             ARP ships in small, focused versions — one coherent theme at a time. Every version is additive: nothing existing breaks, nothing needs migrating.
@@ -362,7 +362,7 @@ Signature: ed25519 ...
             The agent internet is being built now. Be early.
           </h2>
           <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            Read the spec. Run a reference server. Deploy Alfred at your domain. Join the conversation — feedback is what shapes v1.0.
+            Read the spec. Run a reference server. Deploy Alfred at your domain. Join the conversation — feedback is what shapes the spec.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <a
