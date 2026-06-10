@@ -114,7 +114,7 @@ Ed25519Signature2020`}
             <Primitive
               number="03"
               title="Signed messaging over HTTP"
-              body="Structured JSON messages with a shared vocabulary: Request, Respond, Delegate, Cancel. Every message signed. Every signature verified. Works through every firewall, every proxy, every CDN."
+              body="Structured JSON messages with a shared vocabulary: Request, Respond, Notify, Cancel. Every message signed. Every signature verified. Works through every firewall, every proxy, every CDN."
               code={`POST /inbox
 Content-Type: application/arp+json
 Signature: ed25519 ...
